@@ -1,0 +1,11 @@
+
+# Nuxt.js build / generate output
+.nuxt
+#dist
+
+
+# Gatsby files
+.cache/
+
+node_modules/
+.DS_Store
