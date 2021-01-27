@@ -10,10 +10,17 @@ const StyledButton = styled.button`
     height: 2rem;
     min-width: 5rem;
     padding: 0 1rem;
+
+    &.cancel {
+        background: white;
+        border: 1px solid gray;
+        color: gray;
+    }
 `
 
 // define data type of params giving to this component
 interface Props {
+    cancel?: boolean
     children: string
     onClick: () => void
 }
@@ -21,6 +28,7 @@ interface Props {
 export const Button: React.FC<Props> = (props) => (
     <StyledButton
     onClick={props.onClick}
+    className={props.cancel ? 'cancel' : ''}
     >
         {props.children}
     </StyledButton>
